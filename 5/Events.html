@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jquery</title>
+    <link rel="icon" type="image/x-icon" href="https://technokrats.in/wp-content/uploads/2020/11/Content1-7.png">
+    <!-- jquery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <style>
+    body{
+    margin-top: 50px;
+    background-image: url('back.jpg');
+    background-repeat: none;
+    background-size: cover;
+    text-align: center;
+    
+    }
+    </style>
+  </head>
+  <body>
+    <h3>Jquery Events</h3>
+    <hr>
+    <button>Click me to Hide button.</button>
+    <hr>
+    <p>This is paragraph, Double click on me to hide it.</p>
+    <hr>
+    <p id="p1"><b> mouseenter</b><br>Enter this paragraph</p>
+    <hr>
+    <p id="p2"><b>mouseleave</b><br>Enter this paragraph, Then Leave!!!</p>
+    <hr>
+    <p id="p3"><b>MouseDOWN</b><br>MouseDOWN over this paragraph.</p>
+    <hr>
+    <p id="p4"><b>MouseUP</b><br>Mouse UP over this paragraph.</p>
+    
+    <hr>
+    <b>Focus</b><br>Enter your Thought!!! <input type="text" name="Thought" id="in2">
+    <hr>
+    <b>blur</b><br>Say Something!!! <input type="text" name="Thought" id="in1"> 
+    <hr>
+    <p id="id1"><b>.on()</b><br>Click HERE or mouseover to change color.</p>
+    <hr>
+    <p id="p5">Hover</p>
+    <hr>
+
+
+
+    <script>
+    $(document).ready(function(){
+      /*single click*/
+      $("button").click(function(){
+        $(this).hide();
+      });
+
+      /*double click*/
+      $("p").dblclick(function(){
+        $(this).hide();
+      });
+
+      /*mouseenter*/
+      $("#p1").mouseenter(function(){
+        console.log("mouseenter on paragraph!!!");
+      });
+
+      /*mouseleave*/
+      $("#p2").mouseleave(function(){
+        console.log("Bye! You now leave p2!");
+      });
+
+      /*mousedown*/
+      $("#p3").mousedown(function(){
+        console.log("Mouse down over p3!");
+      });
+
+      /*mouseup*/
+      $("#p4").mouseup(function(){
+        console.log("Mouse up over p4!");
+      });
+
+      /*Hover*/
+      $("#p5").hover(function(){
+        alert("Hover!!!!");
+      },
+        function(){
+        alert("Bye! You now leave Hover!");
+      });
+
+      /*focus*/
+      $("input").focus(function(){
+      $(this).css("background-color", "blue");
+      });
+
+      /*blur*/
+      $("input").blur(function(){
+      $("#in1").css("background-color", "pink");
+      });
+
+      /*on()*/
+      $("#id1").on({
+        mouseenter: function(){
+          $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+          $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+        $(this).css("background-color", "yellow");
+        }  
+       });
+
+
+
+    });
+    
+    </script>
+  </body>
+</html>

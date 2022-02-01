@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+ <style>
+    body{
+      margin-top: 50px; 
+      background-image: url('back.jpg'); 
+      background-repeat: none; 
+      background-size: cover;
+      
+    }
+    form label {
+  display: inline-block;
+  width: 100px;
+}
+
+form div {
+  margin-bottom: 10px;
+}
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+
+    
+  </style>
+<body>
+	<h2>Validation Form</h2>
+		<form id="first_form" method="post" action="">
+  <div>
+    <label for="first_name">First Name:</label>
+    <input type="text" id="first_name" name="first_name"></input>
+  </div>
+  <div>
+    <label for="last_name">Last Name:</label>
+    <input type="text" id="last_name" name="last_name"></input>
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"></input>
+  </div>
+  <div>
+    <label for="phone">Phone No.:</label>
+    <input type="phone" id="phone" name="phone"></input>
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"></input>
+  </div>
+  <div>
+    <label for="pincode">Pincode:</label>
+    <input type="pincode" id="pincode" name="pincode"></input>
+  </div>
+  <div>
+    <input type="submit" value="Submit" />
+  </div>
+</form>
+    
+      
+<script>
+$(document).ready(function() {
+
+  $('#first_form').submit(function(e) {
+    e.preventDefault();
+    var first_name = $('#first_name').val();
+    var last_name = $('#last_name').val();
+    var email = $('#email').val();
+    var password = $('#password').val();
+    var phone = $('#phone').val();
+    var pincode = $('#pincode').val();
+
+    $(".error").remove();
+
+    if (first_name.length < 1) {
+      $('#first_name').after('<span class="error">This field is required</span>');
+    }
+    if (last_name.length < 1) {
+      $('#last_name').after('<span class="error">This field is required</span>');
+    }
+    if (email.length < 1) {
+      $('#email').after('<span class="error">This field is required</span>');
+    } else {
+      /*var regEx = /\S+@\S+\.\S+/;
+      var validEmail = regEx.test(email);*/
+      var regEx = "^[a-z0-9+_.-]+@[a-z.]+$";
+      var validEmail = regEx.match(email);
+      if (!validEmail) {
+        $('#email').after('<span class="error">Enter a valid email</span>');
+      }
+    }
+    if (password.length < 8) {
+      $('#password').after('<span class="error">Password must be at least 8 characters long</span>');
+    }
+    /*else {
+      var p = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$";
+      var validPass = p.test(password);
+      if (!validPass) {
+        $('#password').after('<span class="error">Enter a valid Password</span>');
+      }
+    }*/
+
+/*function checkPassword(password)
+{
+    //regular expression for email
+    var pattern = /^[a-zA-Z0-9_-]{3,8}$/;
+    if(pattern.test(password)){
+        return true;
+    } else {
+        return false;
+        $(".error").after('<span class="error">Enter a valid Password</span>');
+    }
+}*/
+
+    if(phone.length<10){
+     $('#phone').after('<span class="error">Phone No. must be 10 digit</span>');
+    };
+    if(pincode.length<6){
+     $('#pincode').after('<span class="error">Pincode must be 6 digit</span>');
+    };
+  });
+
+});
+</script>
+</body>
+</html>
