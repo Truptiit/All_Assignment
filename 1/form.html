@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqdie6TjCkfRQSLvAZvXn19DwOXCrIN7JQhA&usqp=CAU">
+	<style>
+		h1{text-align:center;
+			color:blanchedalmondl ;}
+		.center{
+			left: 50%;
+     		position: absolute;
+  			top: 160%;
+  			}
+  		.right{
+  			left: 90%;
+  			position: absolute;
+  			top: 160%;
+  		}
+  		.left{
+  			position: absolute;
+  			top: 160%;
+  		}
+  		body{
+  			background-image: url('b2.jpg');
+  			background-repeat: no-repeat;  
+  			background-size: cover;
+  			text-align: center;
+  		}
+
+  		legend{
+  			font-weight: bold;
+  		}
+  		
+  		
+	</style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FORM</title>
+</head>
+<body>
+	<fieldset>
+	<h1>User Information</h1>
+	<form>
+		<fieldset>
+			<legend>Personal:</legend>
+		<label for="fname">First Name </label>
+		<input type="text" id="fname" name="fname">
+		<br><br>
+		<label for="lname">Last Name </label>
+		<input type="text" id="phone" name="lname">
+		<br><br>
+		<label for="birthday">Birthday:</label>
+        <input type="date" id="birthday" name="birthday">
+        <br><br>
+		<label for="email">Email ID </label>
+		<input type="email" id="phone" name="email">
+		<br><br>
+		<label for="password">Password </label>
+		<input type="password" id="password" name="password">
+		<br><br>
+		<label for="phone">Phone no. </label>
+		<input type="number" id="phone" name="phone">
+		<br><br>
+		<label for="mob">Mobile no. </label>
+		<input type="number" id="mob" name="mob">
+		<br><br>
+		</fieldset>
+	    <br><br>
+	    <fieldset>
+	    	<legend>Address:</legend>
+		<label for="city">City </label>
+		<input type="text" id="city" name="city">
+		<br><br>
+		<label for="state">State </label>
+		<select name="state" id="state">
+			<option value="select">Select</option>
+			<option value="MH">Maharashtra</option>
+			<option value="AP">Andhra Pradesh</option>
+			<option value="PJ">Punjab</option>
+			<option value="GJ">Gujrat</option>
+			<option value="D">Delhi</option>
+			<option value="MP">Madhya Pradesh</option>
+			<option value="other">Other</option>
+		</select>
+		<br><br>
+		<label for="add">Address </label>
+		<textarea id="add" name="add" cols="15" rows="2"></textarea>
+		<br><br>
+		</fieldset>
+		<br><br>
+		<fieldset>
+			<legend>Other Information:</legend>
+		<label for="edu">Education: </label>
+		<select name="edu" id="edu">
+			<optgroup label="school">
+				<option value="select">Select</option>
+				<option value="X">X</option>
+				<option value="XII">XII</option>
+			</optgroup>
+			<optgroup label="Graduation">
+				<option value="BE">B.E</option>
+				<option value="btech">B.Tech</option>
+				<option value="bca">BCA</option>
+			</optgroup>	
+			<optgroup label="Post-Graduation">
+				<option value="mba">MBA</option>
+				<option value="mtech">M.Tech</option>
+				<option value="other">Other</option>
+			</optgroup>	
+		</select>
+		<br><br>
+		<lable for="gender">Select gender :</lable><br>
+		
+		<label for="female">Female&nbsp</label>
+		<input type="radio" id="female" name="gender"><br>
+		
+		<label for="male">Male &nbsp&nbsp&nbsp</label>
+		<input type="radio" id="male" name="gender"><br>
+		
+		<label for="other">Other &nbsp&nbsp</label>
+		<input type="radio" id="other" name="gender">
+		<br><br>
+		
+		<lable for="tech">Techonologies :</lable><br>
+		
+		<label for="html">HTML</label>
+		<input type="checkbox" id="html" name="html">
+		
+		<label for="css">CSS</label>
+		<input type="checkbox" id="css" name="css">
+		
+		<label for="boot">Bootstrap</label>
+		<input type="checkbox" id="boot" name="boot">
+		
+		<label for="laravel">Laravel</label>
+		<input type="checkbox" id="laravel" name="html">
+		<br><br>
+		
+		<lable for="hobbies">Hobbies :</lable><br>
+		<select name="hobbies" id="hobbies" multiple>
+			<option value="sport">Sport</option>
+			<option value="dance">Dance</option>
+			<option value="cooking">Cooking</option>
+			<option value="hiking">Hiking</option>
+			<option value="writing">Writing</option>
+		</select>
+
+		</fieldset>		
+		<br>
+		<div class="left">
+		<button>RESET</button>
+		</div>
+		<div class="center">
+		  <button type="button" >SUBMIT</button>
+		  <p><i>By Trupti D. Khaire</i><br><b>ITWorksInfotech<b></p>
+	
+	    </div>
+	
+	    <div class="right">
+		  <button>CANCEL</button>
+		</div>
+	
+				
+	</form>
+</fieldset>
+</body>
+</html>
+
