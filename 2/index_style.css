@@ -1,0 +1,77 @@
+body{
+background-color: black;
+overflow-x: hidden;
+}
+h3{
+background-color: whitesmoke;
+border: 3px solid black;
+}
+.colour{
+color:whitesmoke ;
+}
+.img1{
+border-radius: 50%;
+}
+* {
+box-sizing: border-box
+}
+.mySlides1, .mySlides2 {
+display: none;
+}
+img .mySlides1{
+vertical-align: middle;
+width: 90%;
+height: 30%;
+overflow: hidden;
+}
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+background-color: #f1f1f1;
+color: black;
+}
+.b1{
+border-style: solid;
+right: 40%;
+padding-right: 60%;
+}
+footer{
+position: relative;
+}
+.top{
+border: 3px solid black;
+left: 90%;
+}
+img .col-sm-3{
+border: 3px solid blacl;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
