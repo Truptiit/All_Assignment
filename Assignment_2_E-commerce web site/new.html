@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Made with love</title>
+    <link rel="icon" type="image/x-icon" href="2.jpg">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+    <link rel="stylesheet" type="text/css" href="new.css">
+
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script src="script.js"></script>
+
+
+    <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+    }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-custom">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><!-- <img class="img1" src="logo/2.jpg" width="40px" height="40px"> -->Made With Love</a>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-right">
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="#">Product</a></li>
+          <!-- Dropdown -->
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Jute</a></li>
+            <li><a href="#">Paper</a></li>
+            <li><a href="#">Mud</a></li>
+            <li><a href="#">Wool</a></li>
+            <li><a href="#">Craft</a></li>
+            <li><a href="#">Wood</a></li>
+          </ul>
+        </li>
+        
+        <li><a class="nav-link" href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart </a></li>
+        
+        <li><a href="D:\HTML_CSS_Boot\E-commerce web site\login.html"><span class="glyphicon glyphicon-log-in"></span> Login </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- slider -->
+<!-- <div class="slideshow-container-fluid">
+    <div class="mySlides1">
+      <img src="bag.jpg" style="width:100%" height="250">
+    </div>
+    <div class="mySlides1">
+      <img src="jutebag2.jpg" style="width:100%" height="250">
+    </div>
+    <div class="mySlides1">
+      <img src="pot.jpg" style="width:100%" height="250">
+    </div>
+    <div class="mySlides1">
+      <img src="paperuntensils2.jpg" style="width:100%" height="250">
+    </div>
+  
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div> -->
+
+<div class="slider">
+  <div class="container-fluid">
+      <figure>
+        <div><img src="bag.jpg"></div>
+        <div><img src="jutebag2.jpg"></div>
+        <div><img src="pot.jpg"></div>
+        <div><img src="1.jpg"></div>
+        <div><img src="paperuntensils2.jpg"></div>
+      </figure>
+    </div>
+    </div>
+<br/>
+
+
+
+<!-- <div class="container">
+   <h3>Products</h3><br>
+    <div class="row-fluid">
+      <div class="carousel slide" id="inam">
+        <div class="carousel-inner">
+          <div class="item active">
+            <ul>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="mud\mud.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <div>
+                    <h5>Mud Pot</h5>
+                    <p>Rs.55/-</p>
+                    <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  </div>
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="jute\rug.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Rug</h5>
+                  <p>Rs.100/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="jute\jutesmallbag.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Jute bag</h5>
+                  <p>Rs.30/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="paper\paper-box.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Paper Box</h5>
+                  <p>Rs.60/-</p>
+                 <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="item">
+            <ul>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="wool\wool.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Woolen Bag</h5>
+                  <p>Rs.100/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="wool\juteForPlant.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Plant Hanger
+                  <p>Rs.60/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="craft\card.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Card</h5>
+                  <p>Rs.50/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+              <li class="col-sm-3">
+                <div class="div-img">
+                  <img src="craft\1.jpg" alt="">
+                </div>
+                <div class="decorate">
+                  <h5>Label</h5>
+                  <p>Rs.10/-</p>
+                  <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+                  
+                </div>
+              </li>
+            </ul>
+          </div>
+          
+        </div>
+        <a class="car-left" data-slide="prev" href="#inam" class="left carousel-control">‹</a>
+        <a class="car-right" data-slide="next" href="#inam" class="right carousel-control">›</a>
+      </div>
+    </div>
+  </div> -->
+ 
+
+
+
+<!-- card slider -->
+
+<div class="container-fluid bg well ">
+  <h3>Products</h3><br>
+  
+  <div class="row text-center">
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="mud\mud.jpg" class="img-fluid card-img-top card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title"> Mud Pot </h4>
+        <p><b>Rs.100</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+  </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="jute\rug.jpg" class="img-fluid card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title"> Rug </h4>
+        <p><b>Rs.100</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="jute\jutesmallbag.jpg" class="img-fluid card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title"> Jutebag </h4>
+        <p><b>Rs.100</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="paper\paper-box.jpg" class="img-fluid card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title">Pape Box </h4>
+        <p><b>Rs.100</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="wool\wool.jpg" class="img-fluid card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title"> Woolen Bag </h4>
+        <p><b>Rs.250</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-2">
+      <div class="card" style="width: 20rem;">
+        <img src="wool\juteForPlant.jpg" class="img-fluid card-img-top"/>
+        <a href="#!"></a>
+        <div class="card-body">
+        <h4 class="card-title">Plant Hanger </h4>
+        <p><b>Rs.150</b></p>
+        <a href="#" class="btn btn-danger">-</a>
+        <a href="#!" class="btn btn-primary">Add to Card</a>
+        <a href="#" class="btn btn-success">+</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+
+<br>
+
+<!-- Categories -->
+<div class="container-fluid bg-3 well">
+<h3>Categories</h3><br>
+<div class="row text-center imgg ">
+    
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="wool\CoralMacrame.jpg" class="img-fluid"/>
+      <h4>Wool </h4>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="jute\rug2.jpg" class="img-fluid"/>
+      <h4> Jute </h4>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="paper\paperUtensils.jpg" class="img-fluid"/>
+      <h4> Paper </h4>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="mud\pot2.jpg" class="img-fluid"/>
+      <h4> Mud </h4>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="craft\1.jpg" class="img-fluid"/>
+      <h4> Craft </h4>
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-2">
+      <img src="wood\w1.jpg" class="img-fluid"/>
+      <h4> Wood </h4>
+    </div>
+
+    </div>
+  </div>
+
+<br>
+<!-- Footer using CSS -->
+<div class="footer">
+  <h3>Made With Love</h3>
+<div class="row">
+   
+<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+<ul>
+<li class="text1">Company</li>
+<li><a href="#">About Us<a></li>
+<li><a href="#">Privacy Policy</a></li>
+<li><a href="#">Contact Us </a></li>
+<li><a href="#">Copyright</a></li>
+
+</ul>
+</div>
+
+ <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+<ul>
+<li class="text1">Social Media</li>
+<li><a href="#">Facebook</a></li>
+<li><a href="#">Instagram</a></li>
+<li><a href="#">Twitter</a></li>
+<li><a href="#">Linkedin</a></li>
+
+</ul>
+</div>
+
+<div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+<ul> 
+<li class="text1">Subscribe</li>
+<li><a href="#">E-mail</a></li>
+<li><a href="#">Youtube</a></li>
+<li><a href="#">Telegram</a></li>
+
+</ul>
+</div>
+
+</div>
+<div class="row">
+  <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4">
+    
+  </div>
+  
+</div>
+
+  <button class="top" onclick="scrollWin()" style="position:relative; font-size: 35px">   &#8679;
+ </button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+// Next/previous controls
+function plusSlides(n) {
+showSlides(slideIndex += n);
+}
+// Thumbnail image controls
+function currentSlide(n) {
+showSlides(slideIndex = n);
+}
+function showSlides(n) {
+var i;
+var slides = document.getElementsByClassName("mySlides1");
+/*var dots = document.getElementsByClassName("dot");*/
+if (n > slides.length) {slideIndex = 1}
+if (n < 1) {slideIndex = slides.length}
+for (i = 0; i < slides.length; i++) {
+slides[i].style.display = "none";
+}
+for (i = 0; i < dots.length; i++) {
+dots[i].className = dots[i].className.replace(" active", "");
+}
+slides[slideIndex-1].style.display = "block";
+dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- Top Button -->
+<script>
+function scrollWin() {
+window.scrollTo({top: 0,  behavior:'smooth'});
+}
+</script>
+<!-- 
+<script>
+  // JavaScript Document
+$(document).ready(function() {
+$(‘#autoWidth’).lightSlider({
+autoWidth:true,
+loop:true,
+onSliderLoad: function() {
+$(‘#autoWidth’).removeClass(‘cS-hidden’);
+}
+});
+
+</script> -->
+
+</body>
+</html>
