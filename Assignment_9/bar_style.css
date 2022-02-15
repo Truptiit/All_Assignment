@@ -2,7 +2,10 @@
 body{
 	overflow-x: hidden;
 	font-family:  "Brush Script MT", cursive;
+
 }
+
+
 .icon1
 {
 	font-size: 40px; 
@@ -21,6 +24,7 @@ table{
     height: 150%;
     width: 20%;
     color: black;
+    font-size: 30px; 
     }
     
     /* On small screens, set height to 'auto' for the grid */

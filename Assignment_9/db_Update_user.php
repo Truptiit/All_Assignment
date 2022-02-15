@@ -15,4 +15,4 @@
 	  	 } 
 
 ?>
-<br><br><button type="submit" name="back"><a href="User.php">Go back</a></button>
+<br><br><button type="submit" name="back"><a href="user.php">Go back</a></button>

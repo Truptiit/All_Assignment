@@ -1,8 +1,7 @@
 <?php
-include "connection.php";
-    session_start();
+session_start();
+include "connection.php";    
 ?>
-<!-- <?php include "connection.php"; ?> -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +10,7 @@ include "connection.php";
 	<title>Login</title>
 	<!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
     <!-- validation & jquery scripy -->
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
@@ -65,11 +65,11 @@ input{
 		<div class="row">
 			<div class="col-md-6">
 				<h2>User Login</h2>
-			     <form id="form" name="form" method="POST" action="">
+			     <form id="form" name="form" method="POST" action="db_login.php">
 			     	<input type="email" name="User_Email" placeholder="Email"><br><br>
 			     	<input type="password" name="User_Password" placeholder="Password"><br><br>
 			     	
-			     		<button type="submit" name="submit" id="submit"><a href="Home.php">Login</a></button>
+			     		<button type="submit" name="submit" id="submit">Login</a></button>
 			     		
 			     	
 			     </form>
@@ -110,23 +110,3 @@ input{
 	</script>
 </body>
 </html>
-<?php 
-if(isset($_POST["submit"])){
-	$User_Email = $_POST["User_Email"];
-	$User_Password = $_POST["User_Password"];
-
-	$_SESSION['status'] = false;
-
-	//check valid input from user
-
-	if($User_Email == "trupti123@gmail.com" && $User_Password == "Trupti12"){
-		$_SESSION["User_Email"] = $User_Email;
-		$_SESSION['status'] = true;
-		header("Location: Home.php");
-	}
-	else{
-		echo "<font color=red>Invalid Credentials";
-	}
-}
-
-?>
