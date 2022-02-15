@@ -20,8 +20,6 @@ if(isset($_POST["submit"])){
 
 if ($count==1){
 	$_SESSION['User_ID']=$User_ID;
-	/*echo $_SESSION["User_Email"]=$useremail;*/
-      /*echo $_SESSION['User_ID'];*/
 }
 
 if($count>0){
@@ -31,7 +29,7 @@ if($count>0){
 	
 		$_SESSION["status"]=true;
 		header("Location:home.php");
-		exit();
+		/*exit();*/
 	}
 	else{
 		echo "invalid credential";

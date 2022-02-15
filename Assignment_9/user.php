@@ -41,7 +41,8 @@ include "connection.php";
 
 <!-- user_db TABLE -->
 <h3>TABLE (user_db)</h3>
-	<table id="table">
+<div class="table-responsive">
+	<table id="table" >
 		<tr>
 		<th>User ID</th>
 		<th>User Name</th>
@@ -71,9 +72,11 @@ include "connection.php";
 		?>
 	
 	</table>
+</div>
 
 <!-- user_details TABLE -->
 <h3> TABLE (user_details)</h3>
+<div class="table-responsive">
 <table id="table">
 		<tr>
 		<th>User Detail ID</th>
@@ -103,6 +106,7 @@ include "connection.php";
 		?>
 	
 	</table>
+</div>
 
 
  

@@ -26,6 +26,7 @@ include "side_bar.php";
 }
 </style>
 <h3>JOIN table</h3>
+<div class="table-responsive">
 <table id="table">
 	<tr>				   
 	<th>user_name</th>
@@ -48,5 +49,6 @@ while($res=mysqli_fetch_array($query)){
 }
 ?>
 </table>
+</div>
 </body>
 </html>

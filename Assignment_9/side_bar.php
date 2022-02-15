@@ -2,10 +2,10 @@
     session_start();
     include "connection.php";
     /*echo $_SESSION['status'];*/
-    /*if ($_SESSION['status'] != true) {
-      header("Location: home.php");
+    if ($_SESSION['status'] == false) {
+      header("Location: login.php");
       exit();
-    }*/
+    }
     
 ?>
 <!DOCTYPE html>
