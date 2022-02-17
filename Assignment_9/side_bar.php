@@ -15,9 +15,7 @@
     <link rel="icon" type="image/x-icon" href="https://theantiquitiescoalition.org/wp-content/uploads/2018/11/website-icon.png">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- style -->
-    <link rel="stylesheet" type="text/css" href="bar_style.css">
+  
     
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
@@ -26,17 +24,16 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <style>
-      
-      .sidenav {
-    background-color: ;
-    height: 150%;
-    width: 20%;
-    color: black;
-    font-size: 20px; 
 
-    }
-    </style>
+    <!-- validation -->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="bar_style.css">
+    <link rel="stylesheet" type="text/css" href="table.css">
+    
   </head>
   <body>
     <!-- nav bar for mobile -->
@@ -59,10 +56,10 @@
        <li><a href="user.php"><i class='bx bx-group icon' ></i>
          <span class="text nav-text">Users</span></a></li>
 
-         <li><a href="user_details.php"><i class='bx bx-group icon' ></i>
-         <span class="text nav-text">Users Details</span></a></li>
+         <li><a href="join.php"><i class='bx bx-group icon' ></i>
+         <span class="text nav-text">Joins</span></a></li>
 
-         <li><a href="account.php?id=<?php  ['User_Email']; ?>"><i class='bx bx-user icon'></i>
+         <li><a href="account.php"><i class='bx bx-user icon'></i>
          <span class="text nav-text">My Account</span></a></li>
 
 
@@ -76,7 +73,7 @@
     <!-- nav bar for laptop -->
     <div class="container-fluid">
      <div class="row content">
-     <div class="col-sm-3 sidenav hidden-xs">
+     <div class="col-sm-3 sidenav hidden-xs" >
        <h2>User Details</h2>
        <ul class="nav nav-pills nav-stacked">
       
@@ -86,10 +83,10 @@
        <li><a href="user.php"><i class='bx bx-group icon' ></i>
          <span class="text nav-text">Users</span></a></li>
 
-          <li><a href="user_details.php"><i class='bx bx-group icon' ></i>
-         <span class="text nav-text">Users Details</span></a></li>
+          <li><a href="join.php"><i class='bx bx-group icon' ></i>
+         <span class="text nav-text">Joins</span></a></li>
 
-       <li><a href="account.php?id=<?php  ['User_Email']; ?>"><i class='bx bx-user icon'></i>
+       <li><a href="account.php"><i class='bx bx-user icon'></i>
          <span class="text nav-text">My Account</span></a></li>
 
 
@@ -103,19 +100,20 @@
 <br>
 
 <div class="col-sm-9">
- <div class="well">
+ <div class="well" style="background: #99CCFF; width: 106%;">
   <div class="row" >
-   <div class="col-sm-9 col-lg-9">
+   <div class="col-sm-9">
     <h3 style="margin-top: 10px;">Home</h3>
-   </div>
+   
   
-  <div class="col-sm-3 col-lg-3">
+  <div class="col-sm-3" style="color: black; text-align: right;
+    left: 100%;">
       <div class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <i class="bx bxs-user-circle a" style="margin-top: 10px; margin-left: 25px; color: black;" ></i>
+        <i class="bx bxs-user-circle a" style="margin-left: 25px; color: black; font-size: 50px;"></i>
         <ul class="dropdown-menu">
          
-          <li><a href="account.php?id=<?php  ['User_Email']; ?>"><i class='bx bx-user icon'></i>&nbsp My Account</a></li>
+          <li><a href="account.php" ><i class='bx bx-user icon'></i>&nbsp My Account</a></li>
           <li><a href="logout.php"><i class='bx bx-log-out-circle icon' name="logout"></i> &nbsp Logout</a></li>
         
         </ul>
@@ -126,4 +124,6 @@
 
  </div>
   </div>
+</div>
+
   

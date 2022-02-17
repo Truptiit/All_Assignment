@@ -1,50 +1,38 @@
 <?php
 
 include "connection.php";
-  include "side_bar.php";?>
+include "side_bar.php";?>
 
 <style>
-	#table{
-		font-family: Arial, Helvetica, sans-serif;
-        border-collapse: collapse;
-        width: 100%;    
-	}
-	#table th{
-           color: black;
-           padding-top: 12px;
-  	    padding-bottom: 12px;
-           text-align: left;
-           background-color: gray;
-           text-align: center;
-           border: 1px solid;
-	}
-	table, td, th {
-  		border: 1px solid;
-  		padding-top: 12px;
-  	       padding-bottom: 12px;
-  	       font-weight: bold;
-
-}
-#btn1{
-       background-color: skyblue ;
-       font-weight: bold;
+/*#btn{
+       background-color: #99CCFF ;
        padding-right: 10px;
        padding-left: 10px;
-}
-#btn2{
-       background-color: red ;
-       font-weight: bold;
-        padding-right: 10px;
-       padding-left: 10px;
-}
+       height: 40px;
+       width: 100px;
+}*/
 </style>
+<!-- session message -->
+<div class="container-fluid">
+     <div class="row">
+     <div class="col">
+     <?php if(isset($_SESSION['message'])): ?>
+     <div class="alert alert-success">
+     <?php echo $_SESSION['message']; ?>
+     </div>
+	<?php endif; ?>
+	<?php unset($_SESSION['message']); ?>
+     </div>
+     </div>
+    </div>
 
 <!-- user_db TABLE -->
-<h3>TABLE (user_db)</h3>
+<h3>User Details</h3>
 <div class="table-responsive">
-	<table id="table" >
+	<table class="table" >
 		<tr>
-		<th>User ID</th>
+		<!-- <th style="background:#e6f7ff;" >User ID</th> -->
+		
 		<th>User Name</th>
 		<th>User Email</th>
 		<th>Created Date</th>
@@ -56,15 +44,42 @@ include "connection.php";
 			if($result->num_rows > 0){
 				while ($data = $result->fetch_assoc()) {?>
 					<tr>
-						<td><?php echo $data['User_ID']; ?></td>
+						
 						<td><?php echo $data['User_Name']; ?></td>
 						<td><?php echo $data['User_Email']; ?></td>						
 						<td><?php echo $data['Created_Date']; ?></td>
 						<td>
-							<a href="update.php?id=<?php echo $data['User_ID']; ?>"><button type="button" id="btn1">Update</button></a>
+							<a href="update.php?id=<?php echo $data['User_ID']; ?>"><button type="button" class="btn btn-success">Update</button></a>
 							&nbsp&nbsp&nbsp
-							<a href="delete.php?id=<?php echo $data['User_ID']; ?>"><button type="button" id="btn2">Delete</button></a>
-						</td>
+
+							<!-- <a href="delete.php?id="><button type="button" class="btn btn-danger">Delete</button></a> -->
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Delete Record</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete this record?
+      </div>
+      <div class="modal-footer">
+        <a href="delete.php?id=<?php echo $data['User_ID']; ?>"><button type="button" class="btn btn-danger">Yes</button></a>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">NO</button>
+        
+      </div>
+    </div>
+  </div>
+</div>	
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-danger"  data-toggle="modal" data-target="#exampleModal">Delete</button>					</td>
 					</tr>
 			<?php	}
 			}
@@ -72,44 +87,24 @@ include "connection.php";
 		?>
 	
 	</table>
-</div>
+	<hr>
 
-<!-- user_details TABLE -->
-<h3> TABLE (user_details)</h3>
-<div class="table-responsive">
-<table id="table">
-		<tr>
-		<th>User Detail ID</th>
-		<th>User  ID</th>
-		<th>User City</th>
-		<th>User State</th>
-		<th>User Address</th>
-		<th>User Pincode</th>	
-		</tr>
-		<?php
-			$query = "SELECT * FROM user_details";
-			$result = $con->query($query);
-			if($result->num_rows > 0){
-				while ($data = $result->fetch_assoc()) {?>
-					<tr>
-						<td><?php echo $data['user_detail_id']; ?></td>
-						<td><?php echo $data['user_id']; ?></td>
-						<td><?php echo $data['user_city']; ?></td>
-						<td><?php echo $data['user_state']; ?></td>						
-						<td><?php echo $data['user_address']; ?></td>
-						<td><?php echo $data['user_pincode']; ?></td>
-						
-					</tr>
-			<?php	}
-			}
-
-		?>
-	
-	</table>
+	<form action="insert_form.php" method="POST" style="text-align: center;">
+		<label>INSERT USER</label><br>
+		<button type="submit" class="btn btn-info">INSERT</button>
+	</form>
+	<hr>
 </div>
 
 
- 
+ <script>
+    
+    setTimeout(function() {
+        let alert = document.querySelector(".alert");
+            alert.remove();
+    }, 3000);
+    
+    </script>
 
 </body>
 </html>

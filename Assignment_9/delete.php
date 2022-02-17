@@ -1,18 +1,23 @@
 <?php 
+    session_start();
 	include "connection.php"; 
-	 
-	 $id = $_GET['id'];
+	
+	 /*$id = $_GET['id'];*/
 
-	  $query = "DELETE FROM user_db where User_ID = ".$id;
+	  echo $query = "DELETE FROM user_db where User_ID = ".$_GET['id'];
 	  if($con->query($query)){
-	  	echo "Record Deleted";
+	  	$_SESSION['message'] = "Record Deleted  Successfully";
+	  	header("Location: user.php");
+	  	exit();
 	  }
 	  else{
-	  	echo "Faild!!!";
+	  	$_SESSION['message'] = "Record Updatedation Failed!!!";
+	  	header("Location: user.php");
+	  	exit();
 	  }
 
 
 
 ?>
 
-			<br><br><button type="submit" name="back"><a href="user.php">Go back</a></button>
+			<!-- <br><br><button type="submit" name="back"><a href="user.php">Go back</a></button> -->

@@ -1,36 +1,47 @@
 @import url(https://fonts.googleapis.com/css?family=Brush Script MT+cursive);
 body{
 	overflow-x: hidden;
-	font-family:  "Brush Script MT", cursive;
+	font-family: "Lucida Handwriting", cursive;
+      color: black;
 
 }
 
+/*.well {
+    background: #99CCFF;
+}
+*/
 
-.icon1
+.icon
 {
-	font-size: 40px; 
-	padding-left: 3rem; 
+	font-size: 35px; 
+	padding-left: 1rem; 
 	padding-top: 2rem;
+  color: black;
+
 }
 table{
 	text-align: center;
 }
+a{
+      font-size: 20px;
+      color: black;
+    }
+
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
     .row.content {height: 550px}
     
     /* Set gray background color and 230% height */
     .sidenav {
-    background-color: #f1f1f1;
+    background-color: #99CCFF;
     height: 150%;
     width: 20%;
-    color: black;
-    font-size: 30px; 
     }
     
-    /* On small screens, set height to 'auto' for the grid */
+/* On small screens, set height to 'auto' for the grid */
     @media screen and (max-width: 767px) {
     .row.content {height: auto;}
     }
-    .a{
-      font-size: 50px;
-    }
+    
+.well{
+ background-color: #e6f7ff;
+}
