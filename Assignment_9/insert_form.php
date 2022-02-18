@@ -2,7 +2,21 @@
 include "connection.php";
  include "side_bar.php";
  ?>
-<div class="well">      
+<div class="well">     
+<!-- session message -->
+<div class="container-fluid">
+     <div class="row">
+     <div class="col">
+     <?php if(isset($_SESSION['message'])): ?>
+     <div class="alert alert-success">
+     <?php echo $_SESSION['message']; ?>
+     </div>
+  <?php endif; ?>
+  <?php unset($_SESSION['message']); ?>
+     </div>
+     </div>
+    </div>
+
         <form id="form" name="form" method="POST" action="db_insert.php" autocomplete="off">
           <hr><h3>Add new user</h3><hr>
           <br>
@@ -89,3 +103,11 @@ include "connection.php";
 });
   
 </script>
+<script>
+    
+    setTimeout(function() {
+        let alert = document.querySelector(".alert");
+            alert.remove();
+    }, 3000);
+    
+    </script>

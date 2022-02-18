@@ -56,7 +56,7 @@
        <li><a href="user.php"><i class='bx bx-group icon' ></i>
          <span class="text nav-text">Users</span></a></li>
 
-         <li><a href="join.php"><i class='bx bx-group icon' ></i>
+         <li><a href="join.php"><i class='bx bx-layer icon' ></i>
          <span class="text nav-text">Joins</span></a></li>
 
          <li><a href="account.php"><i class='bx bx-user icon'></i>
@@ -79,12 +79,17 @@
       
        <li><a href="home.php"><i class='bx bx-home-alt icon'></i>
          <span class="text nav-text">Home</span></a></li>
+
+        
        
        <li><a href="user.php"><i class='bx bx-group icon' ></i>
          <span class="text nav-text">Users</span></a></li>
 
-          <li><a href="join.php"><i class='bx bx-group icon' ></i>
+          <li><a href="join.php"><i class='bx bx-layer icon' ></i>
          <span class="text nav-text">Joins</span></a></li>
+
+         <li><a href="all_join.php"><i class='bx bx-layer icon' ></i>
+         <span class="text nav-text">All Joins</span></a></li>
 
        <li><a href="account.php"><i class='bx bx-user icon'></i>
          <span class="text nav-text">My Account</span></a></li>
@@ -100,15 +105,31 @@
 <br>
 
 <div class="col-sm-9">
- <div class="well" style="background: #99CCFF; width: 106%;">
+ <div class="well well-sm" style="background: #99CCFF; width: 106%; ">
   <div class="row" >
-   <div class="col-sm-9">
-    <h3 style="margin-top: 10px;">Home</h3>
-   
-  
-  <div class="col-sm-3" style="color: black; text-align: right;
-    left: 100%;">
-      <div class="dropdown">
+    <h3 style="text-align:center;">Dashboard</h3>
+    <!-- <div class="col-sm-10">Dashboard</div>
+    <div class="col-sm-2"><div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        <i class="bx bxs-user-circle a" style="margin-left: 25px; color: black; font-size: 40px;"></i>
+        <ul class="dropdown-menu">
+         
+          <li><a href="account.php" ><i class='bx bx-user icon'></i>&nbsp My Account</a></li>
+          <li><a href="logout.php"><i class='bx bx-log-out-circle icon' name="logout"></i> &nbsp Logout</a></li>
+        
+        </ul>
+        </a>
+        </div></div> -->
+
+   <!-- <div class="" style="color: black; padding-left: 70%;"> -->
+    
+<!--     <div class="well">
+      
+    </div> -->
+    
+     <!-- <div class=""> -->
+    
+      <!-- <div class="dropdown"> <p style="margin-top: 10px;"><b>Dashboard</b>></p>
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
         <i class="bx bxs-user-circle a" style="margin-left: 25px; color: black; font-size: 50px;"></i>
         <ul class="dropdown-menu">
@@ -118,11 +139,11 @@
         
         </ul>
         </a>
-        </div> 
+        </div>  -->
 
-  </div>
+ <!--  </div> -->
 
- </div>
+ <!-- </div> -->
   </div>
 </div>
 

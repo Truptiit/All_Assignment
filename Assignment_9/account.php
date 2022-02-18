@@ -2,7 +2,7 @@
 include "connection.php";
 include "side_bar.php";?>
 <?php
-$id=session_id();
+$id=$_SESSION['User_ID'];
 // echo "the session id: ".$id;
 ?>
 <style>
@@ -11,12 +11,12 @@ $id=session_id();
     color: white;
   }
 </style>
-<div class="well" style="text-align: center; background: #C8C8C8;">
+<div  style="text-align: center; background: #C8C8C8;">
   <form id="form" name="form" method="POST" action="">
     <!--  -->
     <?php
     $r=$_SESSION['user_email'];
-   $query = "SELECT * FROM user_db WHERE User_Email = '$r'";
+   $query = "SELECT * FROM user_db WHERE User_ID = '$id'";
     $result = $con->query($query);
     if($result->num_rows > 0){
     while ($data = $result->fetch_assoc()) {
@@ -88,6 +88,7 @@ $id=session_id();
   <?php 
      /* }
     }*/
+    echo $id;
   ?>
 
   <!-- </div> -->

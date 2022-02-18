@@ -1,13 +1,20 @@
 <?php 
 session_start();
 	include "connection.php"; 
-	
+    
 
 /********************user_db********************/
 
 		  $User_Name = $_POST['user_name'];
 		  $User_Email = $_POST['user_email'];
 		  $User_Password = $_POST['user_password'];
+
+		  /*check empty field */
+		  if ((empty($User_Name) && empty($User_Email)) && empty($User_Password)) {
+		$_SESSION['message'] = "Enter User Details";
+	  	 	header("Location: insert_form.php");
+	  	 	exit();
+	}
 
 	  	  $query = "INSERT INTO user_db(User_Name,User_Email,User_Password)values('$User_Name','$User_Email','$User_Password')";
 

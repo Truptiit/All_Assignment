@@ -1,6 +1,7 @@
 <?php 
 	include "connection.php"; 
 	include "side_bar.php";
+	
 	$query = "SELECT * FROM user_db where User_ID= ".$_GET['id'];
 	$result = $con->query($query);
 	if($result->num_rows > 0){

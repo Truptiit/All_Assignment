@@ -1,5 +1,7 @@
 <?php
 
+include "connection.php";<?php
+
 include "connection.php";
 include "side_bar.php";?>
 
@@ -109,3 +111,4 @@ include "side_bar.php";?>
 
 </body>
 </html>
+?>
